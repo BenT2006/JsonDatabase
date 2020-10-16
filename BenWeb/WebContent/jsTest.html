@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
 <body>
+<head> 
+      <script> 
+         function firstAlert() { 
+           alert("OUCH!");
+         } 
+      </script> 
+</head> 
 
 <h2>My First JavaScript</h2>
+
+
+
+<script>
+document.write("hello this is how you print in js <br>");
+
+//exact same comments as java
+var x = 23;
+var y = 24;
+var z = x + y;
+
+var statement = "hello this is like to string in java";
+
+document.write(" var z : " + z + "<br>");
+document.write(" statement : " + statement + "<br>");
+</script>
+
+<input type="button" value="please dont hit me" onclick="firstAlert()">
+
+
+<p id="grow">This can grow</p>
+
+<button type="button" onclick="document.getElementById('grow').style.fontSize='35px'">Enlarge</button>
 
 <p id="demo"> </p>
 
