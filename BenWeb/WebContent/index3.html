@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><title> User Login Page – Enter details</title>
+<head>
+<!-- 
+<script type="text/javascript" src="/scripts/jquery-3.5.1.js">
+ -->
+
+<!-- 
+<script src="scripts/jquery-3.5.1.js"></script>
+
+ -->
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+<script type="text/javascript">
+
+document.writeln("Hello, JavaScript!");
+document.writeln("Hello, JavaScript 222!");
+document.writeln("Hello, hello. Turn the radio on. Is there anybody out there...");
+
+
+var mytext= "Example Text.";
+/*Call the function*/
+//alert(mytext);
+
+mytext= "Hello, hello. Turn the radio on. Is there anybody out there...";
+
+document.writeln(mytext);
+
+function hideshow() {
+
+    var allHTMLTags = new Array();
+
+    //Create Array of All HTML Tags
+    var allHTMLTags = document.getElementsByTagName("*");
+
+    //Loop through all tags using a for loop
+    for (i = 0; i < allHTMLTags.length; i++) {
+
+        //Get all tags with the specified class name.
+        if (allHTMLTags[i].className == "revhistory") {
+
+            // hide or display the elements
+            if (allHTMLTags[i].style.display == "none") {
+                allHTMLTags[i].style.display = "";
+            } else {
+                allHTMLTags[i].style.display = "none";
+            }
+        }
+    }
+}
+
+
+function createParagraph() {
+	  let para = document.createElement('p');
+	  para.textContent = 'You clicked the button!';
+	  document.body.appendChild(para);
+	}
+	
+</script>
+
+
+
+</head>
+<body>
+
+<br>
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<br>
+
+<div class="revhistory">This is the text which will be manipulated via JavaScript</div>
+
+<input type="button" value="Show/ Hide"
+onclick="hideshow()">
+
+<br>
+
+<button onclick="createParagraph()">Click me!</button>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bruh i just realized</title>
+<!-- https://www.w3schools.com/html/html5_syntax.asp -->
+<style>
+body {
+	background-color: powderblue;
+}
+
+h1 {
+	color: red;
+}
+
+p {
+	color: blue;
+}
+</style>
+</head>
+
+
+<body>
+<script type = "text/JavaScript">
+         function EventHandler() {
+            alert("FV215b! amazing hesh penetration, and turret armor");
+         }
+      </script>
+       <p onmouseover = "EventHandler();">Bring your mouse here to see the best heavy tank at tier 10</p>
+<marquee>MARQUEEEE</marquee>
+<marquee direction = "right">MARQUEEEE</marquee>
+<br>
+
+<head>
+      <title>Event Handlers Example</title>
+      <base href = "http://localhost:8080/BenWeb/benHTMLTest.html" />
+      
+      
+   </head>
+   
+   <table width = "100%" border = "0">
+         
+         <tr valign = "top">
+            <td bgcolor = #6f319e width = "20%">
+               <b>Tanks owned below tier 10</b><br />
+               E75 TS<br />
+               Black Prince<br />
+               SU-100Y
+            </td>
+				
+            <td bgcolor = #a61a95 height = "200" width = "60%">
+               Tanks soon to own<br />
+               FV215b<br />
+               Obj 140
+               
+            </td>
+				
+            <td bgcolor = #6f319e width = "20%">
+               <b>Tier 10 tanks owned</b><br />
+               T110E5<br />
+               
+            </td>
+            
+         </tr>
+         <tr>
+            <td colspan = "3" bgcolor = "#a61a95">
+            <center>ROW #2</center>
+               
+            </td>
+         </tr>
+         
+      <table>
+
+   
+      
+   
+<br>
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:rgb(111,49,158);stroke:black;stroke-width:10;opacity:1" />
+</svg>
+<br>
+
+</style>
+
+<p>This is <span style = "color:red">red</span> and this is <span style = "color:green">green</span>
+
+<table bgcolor = "yellow" width = "100%">
+         <tr>
+            <td>
+               This background is yellow
+            </td>
+         </tr>
+      </table>
+
+<font size = "6"> this is font size 6</font>
+
+
+
+<style>
+#div1 {
+  width: 350px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="https://i.ytimg.com/vi/DAVfeBUX9HM/maxresdefault.jpg" draggable="true" ondragstart="drag(event)" width="320" height="180">
+<form action="/action_page.php" autocomplete="on">
+  
+  <label for="fname" >IGN:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname" >WN8:</label><br>
+  <input type="text" id="lname" name="lname" value="" maxlength="4" size="4" placeholder="2910"><br><br>
+  <input type="submit" value="Submit"><br>
+  this a check box ->
+  <input type="checkbox"> 
+</form> <br><br>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"s></canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+<br>
+<form action="/action_page.php">
+  <label for="email">Enter your WoTb email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" formnovalidate="formnovalidate"
+  value="Submit without validation">
+</form>
+<br>
+<br>
+<iframe width="300" height="220" src="https://www.youtube.com/embed/QH0_YxzcbXI">
+</iframe>
+<br>
+
+<br>
+<iframe width="300" height="220" src="https://www.youtube.com/embed/YXGkTSIlct8">
+</iframe>
+<br>
+
+<br>
+<iframe width="300" height="220" src="https://www.youtube.com/embed/de54MTGBP9c">
+</iframe>
+<br>
+
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("favTank", "FV215b");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("favTank");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+
+
+<section id="leftbox">
+	<p>(key) One: <input type="text" id="one"></p>
+	<p>(value) Two: <textarea id=""></textarea></p>
+	<p><input type="button" id="button" value="save"></p>
+</section>
+
+<section id="rightbox">
+Nothing yet boss!
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<label for="stats">Choose your stat level:</label>
+<select id="stats" name="stats" size="3" multiple> <!-- scroll for size -->
+<option value="bad">bad</option>
+<option value="average">average</option>
+  <option value="good">good</option>
+  <option value="very good">very good</option>
+  <option value="unicum">unicum</option>
+  <option value="super unicum">super unicum</option>
+</select><br><br>
+
+<p>Command to select multiple for 2 accounts</p>
+
+<textarea name="message" rows="10" cols="30">
+yo this a text box testing 1234 this is a box >>>>>>>>
+edit it if u want bro
+</textarea>
+
+<button type="button" onclick="alert('yo waddup why u press me')">don't be press me</button>
+
+<br>
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="tank">
+  <label for="vehicle1"> I have a T110E5</label><br>
+  <input type="checkbox" id="shells" name="shells" value="hesh">
+  <label for="vehicle2"> HESH is the best shell</label><br>
+  <input type="checkbox" id="agree" name="vehicle3" value="facts">
+  <label for="vehicle3">Liberals are degenerates</label>
+</form>
+<br>
+<br>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<br>
+
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Description of A</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>Description of B</td>
+  </tr>
+</table>
+
+this is an example of an entity ampersand &amp;
+<p>I will display &euro; - moneyy when we went to france</p>
+
+<p style="font-size:48px">&#128525;</p>
+<p>&#128525;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <html dir = "rtl">  -->
+
+	<h1>My First Heading</h1>
+	<p>
+		My first <br /> paragraph.
+	</p>
+
+	<h1 style="font-size: 5vw">Size Test</h1>
+
+	<a
+		href="https://www.google.com/search?q=sike+thats+the+wrong+number&rlz=1C5CHFA_enUS915US915&oq=sike+thats+the&aqs=chrome.0.0j69i57j0l6.2232j0j7&sourceid=chrome&ie=UTF-8"
+		target="_self">Number</a>
+	<!--  <meta name="viewport" content="width=device-width, initial-scale=1">	just in case open from phone  -->
+	<pre>
+<code>
+x = 5; htyl - 6<br>
+y = 6;<br>
+z = x + y;
+</code>
+</pre>
+
+
+	<picture>
+	<source media="(min-width: 650px)" alt="img_1"
+		srcset="https://www.w3docs.com//uploads/media/news_gallery/0001/01/thumb_348_news_gallery_list.jpeg">
+	<source media="(min-width: 430px)" alt="img_2"
+		srcset="https://www.w3docs.com//uploads/media/news_gallery/0001/01/thumb_316_news_gallery_list.jpeg">
+	<img
+		src="https://www.w3docs.com//uploads/media/news_gallery/0001/01/thumb_366_news_gallery_list.jpeg"
+		alt="img" style="width: auto;"> </picture>
+	<p>Some information about pictures</p>
+
+	<br>
+	<br>
+	<div style="border: 1px solid pink; padding: 20px; font-size: 20px">
+		<p>div testing this is the pink border.</p>
+		<p>paragraph boi</p>
+	</div>
+
+	<br>
+
+	<div style="border: 1px solid red; padding: 20px; font-size: 30px">
+		<p>div testing this is red border cuz different style.</p>
+		<p>ditto</p>
+	</div>
+	<picture>
+	<source srcset="https://i.ytimg.com/vi/q_7Y24A6oFY/maxresdefault.jpg"
+		media="(max-width: 600px)">
+	<source
+		srcset="https://media.istockphoto.com/videos/portrait-of-highland-straight-fluffy-cat-with-long-hair-and-round-in-video-id1161210058?s=640x640"
+		media="(max-width: 1500px)">
+	<source
+		srcset="https://i1.wp.com/katzenworld.co.uk/wp-content/uploads/2019/06/funny-cat.jpeg?fit=1920%2C1920&ssl=1">
+	<img src="img_smallflower.jpg" alt="Flowers"> </picture>
+
+
+	<div class="warning">
+		<img
+			src="https://wiki.gcdn.co/images/thumb/5/56/Leo1HG.jpg/301px-Leo1HG.jpg"
+			alt="An intimidating leopard." style="width: 200px; height: 128px">
+		<p>^Beware of the leopard^</p>
+	</div>
+
+
+	<figure>
+		<img
+			src="https://i.kym-cdn.com/entries/icons/facebook/000/031/003/cover3.jpg"
+			alt="bruh" style="width: 200px; height: 128px">
+		<figcaption>Fig.1 - bruh, why, bruh.</figcaption>
+	</figure>
+
+	<h1>My First JavaScript</h1>
+
+	<button type="button"
+		onclick="document.getElementById('demo').innerHTML = Date()">
+		Click me to display Date and Time.</button>
+
+	<p id="demo"></p>
+	<script>
+		alert('Hello, world!');
+	</script>
+
+	<a href="mailto:bruh@gmail.com">bruh@gmail.com</a>
+
+
+
+	<h1>This is heading 1</h1>
+	<h2>This is heading 2</h2>
+	<h3>This is heading 3</h3>
+	<h4>This is heading 4</h4>
+	<h5>This is heading 5</h5>
+	<h6>This is heading 6</h6>
+
+	<table border="1">
+		<tr>
+			<td>Row 1, Column 1</td>
+			<td>Row 1, Column 2</td>
+		</tr>
+
+		<tr>
+			<td>Row 2, Column 1</td>
+			<td>Row 2, Column 2</td>
+		</tr>
+	</table>
+
+
+
+	<pre>
+         function testFunction( strText ){
+            alert (strText)
+         }
+      </pre>
+
+	<p>
+		<i>italic</i> An example of this technique appears in the movie
+		"12&nbsp;Angry&nbsp;Men."
+	</p>
+
+	<p align="left">This is left aligned</p>
+	<p align="center">This is center aligned</p>
+	<p align="right">This is right aligned</p>
+
+	<ul>
+		<li>Beetroot</li>
+		<li>Ginger</li>
+		<li>Potato</li>
+		<li>Radish</li>
+	</ul>
+
+	<p style="font-family: Times New Roman; color: #FF0000;">Some
+		text...</p>
+
+	<p>Simple Image Insert</p>
+	<img
+		src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg"
+		alt="why no work" style="width: 600px; height: 400px">
+
+	<img src="resources/img/cat.jpg" alt="why not work"
+		style="width: 256px; height: 256px">
+
+
+
+
+
+</body>
+</html>
