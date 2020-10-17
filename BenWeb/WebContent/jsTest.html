@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
-<body>
+
 <head> 
       <script> 
          function firstAlert() { 
            alert("OUCH!");
          } 
+         
+         function add(x, y) {
+        	 document.write("add : " + x + y + " <br>");
+         }
+         
+         function start(){
+        	 add(1, 2);
+
+        	 add("i love", " foodssss");
+         }
+         
+         function person(name, age){
+        	 this.name = name;
+        	 this.age = age;
+         }
+         
+         var ben = new person("Benjamin", 14);
+         
+         
+         
+         
+         
+         
       </script> 
-</head> 
-
-<h2>My First JavaScript</h2>
-
-
-
-<script>
+      
+      <script>
+      
+      document.write("Name : " + ben.name + ", Age : " + ben.age + "<br>");
+      
+      var ben = "cool";
+      
+      if(ben == "cool"){
+    	  document.write("ben is cool :D<br>");
+      } else{
+    	  document.write("ben is not cool :(<br>")
+      }
+      
 document.write("hello this is how you print in js <br>");
 
 //exact same comments as java
@@ -25,8 +54,18 @@ var statement = "hello this is like to string in java";
 
 document.write(" var z : " + z + "<br>");
 document.write(" statement : " + statement + "<br>");
-</script>
 
+start();
+
+</script>
+</head> 
+<body onLoad="alert('locked and loaded')">
+<h2>My First JavaScript</h2>
+
+
+<a href="https://www.blitzstars.com/player/com/_HyperHulldown" onMouseOut="alert('bro come back check ur stats');">
+Stats!</a>
+<br>
 <input type="button" value="please dont hit me" onclick="firstAlert()">
 
 
