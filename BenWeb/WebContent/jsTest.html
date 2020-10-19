@@ -16,14 +16,24 @@
 
         	 add("i love", " foodssss");
          }
-         
+         // making objects using constructor functions
          function person(name, age){
         	 this.name = name;
         	 this.age = age;
+        	 this.yearsUntillRetire = years;
          }
          
          var ben = new person("Benjamin", 14);
+         // making objects with object initializers 
+         benObj = {name:"Benjamin Tran", age:14};
+         dadObj = {name:"Thang Tran", age:63};
          
+         function years(){
+        	 var numYears = 65 - this.age;
+        	 return numYears;
+         }
+         
+         var people = new Array("Ben ", "Evan ", "Nigel ");
          
          
          
@@ -32,7 +42,8 @@
       </script> 
       
       <script>
-      
+      document.write(people[0] + people[1] + people[2] + "<br>");
+      document.write(ben.yearsUntillRetire() + " years untill ben retires <br>");
       document.write("Name : " + ben.name + ", Age : " + ben.age + "<br>");
       
       var ben = "cool";
@@ -44,13 +55,13 @@
       }
       
 document.write("hello this is how you print in js <br>");
-
+document.write(benObj.name + " looks up to " + dadObj.name + " because he is smart<br>");
 //exact same comments as java
 var x = 23;
 var y = 24;
 var z = x + y;
 
-var statement = "hello this is like to string in java";
+var statement = "hello this is like string in java";
 
 document.write(" var z : " + z + "<br>");
 document.write(" statement : " + statement + "<br>");
