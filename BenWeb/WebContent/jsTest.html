@@ -32,19 +32,64 @@
         	 var numYears = 65 - this.age;
         	 return numYears;
          }
+         // way to make array
+         var bros = new Array("Ben", "Evan", "Nigel");
+         //bros.pop(); dont uncomment if u dont wanna lose Nigel
+         var string1 = bros.join(" ");
          
-         var people = new Array("Ben ", "Evan ", "Nigel ");
+         var tanks = new Array(3);
+         
+         tanks[0] = "FV215b";
+         tanks[1] = "T110E5";
+         tanks[2] = "Conqueror";
          
          
+         //var name = prompt("Enter your name:", ""); i comment out because i have to 
+         // write name in every time i refresh
+         function hiEveryTenSec(){
+        	 document.write("hi");
+         }
          
+         function timeRefreshed(){
+        	 var now = new Date();
+        	 var hours = now.getHours();
+        	 var mins = now.getMinutes();
+        	 var secs = now.getSeconds();
+        	 document.write(hours + ":" + mins + " " + secs + "<br>");
+         }
+         
+         function startTime() {
+        	  var today = new Date();
+        	  var h = today.getHours();
+        	  var m = today.getMinutes();
+        	  var s = today.getSeconds();
+        	  m = checkTime(m);
+        	  s = checkTime(s);
+        	  document.getElementById('txt').innerHTML =
+        	  h + ":" + m + ":" + s;
+        	  var t = setTimeout(startTime, 500);
+        	}
+         
+         function checkTime(i) {
+        	  if (i < 10) {i = "0" + i};  //add zero in front of numbers < 10
+        	  return i;
+        	}
          
          
       </script> 
       
       <script>
-      document.write(people[0] + people[1] + people[2] + "<br>");
+      //setInterval("hiEveryTenSec()" , 1000);
+      //document.write("Hello " + name + "<br>");
+      document.write("You refreshed this page at ");
+      timeRefreshed(); 
+      document.write("My favorite tank I own is the " + tanks[0] + "<br>");
+      document.write(string1 + "<br>");
+      document.write("we are the " + bros.length + " bros<br>")
       document.write(ben.yearsUntillRetire() + " years untill ben retires <br>");
       document.write("Name : " + ben.name + ", Age : " + ben.age + "<br>");
+      
+      
       
       var ben = "cool";
       
@@ -70,7 +115,7 @@ start();
 
 </script>
 </head> 
-<body onLoad="alert('locked and loaded')">
+<body onload="startTime()">
 <h2>My First JavaScript</h2>
 
 
