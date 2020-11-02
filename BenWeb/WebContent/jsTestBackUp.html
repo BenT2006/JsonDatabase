@@ -17,10 +17,28 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+
+function validator(){
+	if(document.application.statcheck.checked){
+		alert("ok we get it you are purpl");
+	}else{
+		alert("lol nub");
+	}
+	
+}
+
+var x = document.forms[0].length;
 </script>
 </head>
 
 <body onload="startTime()">
+<form name = "application">
+IGN: <input type="text" name="ingamename"/>
+WN8: <input type="text"name="wneight"/>
+<br>
+<input type="checkbox" name="statcheck"/>
+<input type="button" value="Press if you have superunicum stats" onClick="validator()" />
+</form>
 
 <div id="txt"></div>
 

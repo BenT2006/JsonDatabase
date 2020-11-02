@@ -79,8 +79,41 @@
       </script> 
       
       <script>
+      
+      
       //setInterval("hiEveryTenSec()" , 1000);
       //document.write("Hello " + name + "<br>");
+      var tired = false;
+      if(tired){
+    	  document.write("Ben is tired of nub teams<br>");
+      }else{
+    	  document.write("always will be<br>");
+      }
+      // this tells date by comparing cases, 0 to 6
+      switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+         day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+    }
+      document.write("Today is " + day + "<br>");
+      console.log("This is to write in the console, the other document.write is for your page")
       document.write("You refreshed this page at ");
       timeRefreshed(); 
       document.write("My favorite tank I own is the " + tanks[0] + "<br>");
@@ -118,6 +151,8 @@ start();
 <body onload="startTime()">
 <h2>My First JavaScript</h2>
 
+<button onclick="window.print()">Print this page</button>
+<br>
 
 <a href="https://www.blitzstars.com/player/com/_HyperHulldown" onMouseOut="alert('bro come back check ur stats');">
 Stats!</a>
