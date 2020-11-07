@@ -27,6 +27,10 @@ function validator(){
 	
 }
 
+function statVerify(){
+	document.getElementById("stat").innerHTML = "You are +2.9k WN8";
+}
+
 var x = document.forms[0].length;
 </script>
 </head>
@@ -39,6 +43,10 @@ WN8: <input type="text"name="wneight"/>
 <input type="checkbox" name="statcheck"/>
 <input type="button" value="Press if you have superunicum stats" onClick="validator()" />
 </form>
+
+<p id="stat">Are you super unicum?</p>
+
+<button onclick="statVerify()">I am +2.9k WN8</button>
 
 <div id="txt"></div>
 
