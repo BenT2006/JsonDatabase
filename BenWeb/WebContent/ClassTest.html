@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>How to define and use a Class method.</p>
+
+<p id="tank"></p>
+
+<script>
+class Tank {
+  constructor(model, tier, nation) {
+	  this.model = model;
+	  this.tier = tier;
+	  this.nation = nation;
+  }
+  
+  model1() {
+    return this.model;
+  }
+  
+  tier2() {
+	return this.tier;
+  }
+  
+  nation3() {
+	return this.nation;
+  }
+  
+}
+
+
+
+let fv = new Tank("FV215b", 10, "United Kingdom");
+document.getElementById("tank").innerHTML = "My tank is the " + fv.model1() + ", it is tier " + fv.tier2() + ", and it is from the " + fv.nation3();
+</script>
+
+
+</body>
+</html>

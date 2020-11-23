@@ -27,7 +27,64 @@ function validator(){
 	
 }
 
+class Tank {
+	  constructor(model, tier, nation) {
+	    this.model = model;
+	    this.tier = tier;
+	    this.nation = nation;
+
+	  }
+	  
+	  model() {
+	    return this.model;
+	  }
+	  
+	  tier() {
+		    return this.tier;
+		  }
+	  
+	  nation() {
+		    return this.nation;
+		  }
+	  
+	}
+
+	let myTank = new Tank("FV215b", 10, "United Kingdom");
+	document.getElementById("tanktest").innerHTML =
+	"My tank is the " + myTank.model() + ", it is tier " + myTank.tier() + " and it is from the " + myTank.nation;
+	
+numCheck = () => {
+	  var message, x;
+	  message = document.getElementById("myStatNum");
+	  message.innerHTML = "";
+	  x = document.getElementById("validator").value;
+	  try { 
+	    if(x == "")  
+	    	throw "empty";
+	    if(isNaN(x))
+	    	throw "not a number";
+	    x = Number(x);
+	    if(x > 2900)  
+	    	throw "a good player";
+	    if(x==2900)
+	    	throw " border line, bring those stats up"
+	    if(x < 2900)   
+	    	throw "trash";
+	  }
+	  catch(err) {
+	    message.innerHTML = "You are " + err;
+	  }
+	}
+	
+	
+	
+	
+	
 function statVerify(){
+	document.getElementById("stat").innerHTML = "You are +2.9k WN8";
+}
+
+arrowTest = () => {
 	document.getElementById("stat").innerHTML = "You are +2.9k WN8";
 }
 
@@ -44,11 +101,20 @@ WN8: <input type="text"name="wneight"/>
 <input type="button" value="Press if you have superunicum stats" onClick="validator()" />
 </form>
 
+<p id="tanktest"></p>
+
 <p id="stat">Are you super unicum?</p>
 
 <button onclick="statVerify()">I am +2.9k WN8</button>
 
 <div id="txt"></div>
+
+
+<p>Input your WN8</p>
+
+<input id="validator" type="text">
+<button type="button" onclick="numCheck()">Test Input</button>
+<p id="myStatNum"></p>
 
 </body>
 </html>
