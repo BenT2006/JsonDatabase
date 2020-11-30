@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>JavaScript Functions</h2>
+
+	<p>Self invoking functions :</p>
+	<p id="selfInTest"></p>
+
+	<p>Functions are objects, you can use methods on them (return arguments.length;) : </p>
+	<p id = "callingfunc"></p>
+	
+	<p>Just in case one of parameters is undefined, it is best that you set a default one</p>
+	<p id = "default"></p>
+	<p>This is a built in method. This can use a method belonging to another object :</p>
+	<p id = "callMethood"></p>
+	
+	
+	
+	<script>
+		(function selfInvoke() {
+			document.getElementById("selfInTest").innerHTML = "Calling myself";
+		})();
+
+		function funcObj(a, b) {
+			//arguments object is a built in object. Contains array of all args
+			return arguments.length;
+		}
+		document.getElementById("callingfunc").innerHTML = funcObj(4, 3);
+		//just in case one of parameters is undefined, it is best that you set a default one
+		//or you can set it directly in parameters --> defTest(x, y = 2)
+		function defTest(x, y) {
+			  if (y === undefined) {
+			    y = 2;
+			  }  
+			  return x * y;
+			}
+			document.getElementById("default").innerHTML = defTest(5) + ", Returning this without owner object, so becomes global object -> " + windowReturn();
+			
+			function windowReturn() {
+				  return this;
+			}
+			
+			var wotank = {
+					  info: function() {
+					    return this.tier + " " + this.model;
+					  }
+			}
+			
+			var wotank1 = {
+					tier: 10,
+					model:"AMX 50 b"
+			}
+			
+			var x = wotank.info.call(wotank1); 
+			document.getElementById("callMethod").innerHTML = x; 
+	</script>
+
+
+</body>
+</html>

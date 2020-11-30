@@ -8,6 +8,9 @@
 
 <p id="tank"></p>
 
+<p id="tarry"></p>
+
+
 <script>
 class Tank {
   constructor(model, tier, nation) {
@@ -15,13 +18,15 @@ class Tank {
 	  this.tier = tier;
 	  this.nation = nation;
   }
-  
+  // leaving off semicolon at the end of return doesnt make a difference. 
+  //It automatically closes at the end of the line, so never break return 
+  //statements into 2 different lines.
   model1() {
-    return this.model;
+    return this.model
   }
   
   tier2() {
-	return this.tier;
+	return this.tier
   }
   
   nation3() {
@@ -30,10 +35,13 @@ class Tank {
   
 }
 
-
-
 let fv = new Tank("FV215b", 10, "United Kingdom");
 document.getElementById("tank").innerHTML = "My tank is the " + fv.model1() + ", it is tier " + fv.tier2() + ", and it is from the " + fv.nation3();
+
+var ta = {tankmodel:"T-62A", tier1:10, nation2:"Soviet Union"};
+var tankArray = Object.values(ta);
+document.getElementById("tarry").innerHTML = tankArray;
+
 </script>
 
 

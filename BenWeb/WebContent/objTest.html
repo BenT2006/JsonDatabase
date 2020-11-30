@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p>This is using a function to get each individual value and printing those out : </p>
+<p id="frenchtank"></p>
+
+<p>This is using obj.____ method : </p>
+<p id="displaytonk"></p>
+
+<p>This is using a in loop to print each value out : </p>
+<p id="rusLoop"></p>
+
+<p>This is turning an obj into array then printing that array. The "Soviet union" is a prototype added in later(Prototypes can also be functions) : </p>
+<p id="rusar"></p>
+
+
+
+<script>
+
+	function tentank(tier, modelName) {
+		this.tier = tier;
+		this.modelName = modelName;
+	
+	}
+
+	var amx = new tentank(10, "AMX 50 b");
+	
+	amx.info = function() {
+		return this.modelName + ", tier " + this.tier;
+	}
+	document.getElementById("frenchtank").innerHTML =
+		amx.info(); 
+	
+	document.getElementById("displaytonk").innerHTML =
+		amx.modelName + "," + amx.tier;
+	
+	var x, txt = "";
+	
+	var kingRussian = new tentank(10, "IS-4");
+	
+	for (x in kingRussian) {
+		txt += kingRussian[x] + ", ";
+	};
+	
+	document.getElementById("rusLoop").innerHTML = txt;
+		
+		
+	tentank.prototype.nation = "Soviet Union";
+	
+	var tankarr = Object.values(kingRussian);
+	document.getElementById("rusar").innerHTML = kingRussian.nation + "," + tankarr;	
+</script>
+
+
+</body>
+</html>
