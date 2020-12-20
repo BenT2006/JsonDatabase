@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>JavaScript Promise</h2>
+
+	<p id="promise"></p>
+
+	<script>
+		function show(result) {
+			document.getElementById("promise").innerHTML = result;
+		}
+
+		let pro = new Promise(function(resolve, reject) {
+			
+			let x = true;
+
+			// try to change x to 5
+
+			if (x == true) {
+				resolve("True");
+			} else {
+				reject("False");
+			}
+		});
+
+		pro.then(
+				
+		function(value) {
+			show(value); 
+		},
+		function(error) {
+			show(error); 
+		}
+		
+		);
+	</script>
+
+</body>
+</html>

@@ -7,17 +7,27 @@
 	<p>Self invoking functions :</p>
 	<p id="selfInTest"></p>
 
-	<p>Functions are objects, you can use methods on them (return arguments.length;) : </p>
-	<p id = "callingfunc"></p>
-	
-	<p>Just in case one of parameters is undefined, it is best that you set a default one</p>
-	<p id = "default"></p>
-	<p>This is a built in method. This can use a method belonging to another object :</p>
-	<p id = "callMethood"></p>
-	
-	
-	
+	<p>Functions are objects, you can use methods on them (return
+		arguments.length;) :</p>
+	<p id="callingfunc"></p>
+
+	<p>Just in case one of parameters is undefined, it is best that you
+		set a default one</p>
+	<p id="default"></p>
+	<p>This is a built in method. This can use a method belonging to
+		another object :</p>
+	<p id="callMethod"></p>
+	<p>apply() is the exact same as call(), except that call takes arguments seperatly while apply takes them into an array</p>
+	<p id="applyMethod"></p>
+
+	<p>Call backs are when you use a function as a parameter for another function</p>
+	<p>This is an asynchronous function. It will display in 10 secs</p>
+	<h1 id="quitting"></h1>
+
 	<script>
+	
+		setTimeout(quitting, 10000);
+	//"What you can't buy with money, you can buy with a LOT of money." - My dad
 		(function selfInvoke() {
 			document.getElementById("selfInTest").innerHTML = "Calling myself";
 		})();
@@ -40,20 +50,28 @@
 			function windowReturn() {
 				  return this;
 			}
-			
-			var wotank = {
-					  info: function() {
-					    return this.tier + " " + this.model;
-					  }
+
+		var wotbtank = {//this is function, and the method is info
+			info : function(wr,numoften) {
+				return this.model + " " + this.nation + " " + this.tier + " " + wr + " and i have " + numoften + " tier 10 tanks";
 			}
-			
-			var wotank1 = {
-					tier: 10,
-					model:"AMX 50 b"
-			}
-			
-			var x = wotank.info.call(wotank1); 
-			document.getElementById("callMethod").innerHTML = x; 
+		}
+		
+		function quitting() {
+			document.getElementById("quitting").innerHTML = "Quitted world of tanks blitz!! Hooray!"; 
+		}
+
+		var fv = {
+			model : "FV215b",
+			nation : "United Kingdom",
+			tier : 10
+		} //when using arguments, use comma then the arg
+		var fvCall = wotbtank.info.call(fv, "62%", 3); // call method is a method that can be used on different objects, requires the parameters be listed explicitly
+		var fvApply = wotbtank.info.apply(fv, ["0% cuz i quit bro", 0]);//apply is same thing as call but lets you invoke the function with arguments as an array
+		document.getElementById("callMethod").innerHTML = fvCall; 
+		document.getElementById("applyMethod").innerHTML = fvApply; 
+		//https://medium.com/@jhawleypeters/javascript-call-vs-apply-vs-bind-61447bc5e989 <-- Differences between call and apply
+		//https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply <-- same
 	</script>
 
 

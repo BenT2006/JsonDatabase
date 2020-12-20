@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: rgb(205, 92, 92);
+}
+.center {
+  margin: auto;
+  height: 70%;
+  width: 50%;
+  border: 30px solid black;
+  padding: 75px;
+}
+</style>
+<meta charset="UTF-8">
+<title>Ben's first Tip Calculator</title>
+<script>
+
+function submitter() {
+	  document.getElementById("moneydata").submit();
+	  document.getElementById("moneyDue").innerHTML = 
+			"hihihih";
+	}
+function tipCalc(){	
+	document.getElementById("moneyDue").innerHTML = 
+		"hihihih";
+}
+tipCalc(tip, price);
+</script>
+</head>
+<body>
+
+<div class="center">
+  <h1 style="text-align:center;">Ben's Tip Calculator</h1>
+  Desired tip percentage: 
+    <input type="number"
+    	   required name="tip" 
+    	   min="0" 
+    	   value="0"
+           id="percentTip"
+           value=""> 
+           <br>
+  <br>
+  Price of Bill:
+    <input type="number" 
+    	   required name="price" 
+    	   min="0" value="0" 
+    	   step=".01"
+    	   id="Bill"
+           value=""> 
+           <br>
+           <br>
+    <input type="button" onclick="submitter()" value="Calculate">
+  	<p>Tip : </p>
+  	<p id="moneyDue"></p>
+  	
+</div>
+
+
+</body>
+</html>

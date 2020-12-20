@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: rgb(205, 92, 92);
+}
+container {
+  margin: auto;
+  height: 70%;
+  width: 50%;
+  border: 30px solid black;
+  padding: 75px;
+}
+</style>
+<script>
+
+function submitData(){
+	document.getElementById("moneydata").submit();
+	document.getElementById("total_Bill").innerHTML = 
+		"hihihih";
+}
+
+</script>
+<meta charset="UTF-8">
+<title>Tip Calculator</title>
+</head>
+<body>
+	<div id="container">
+		Bill Amount:<input id="bill_amount" type="number">
+		<br>
+		<br>
+		Tip Percentage:<input id="tip_percentage" type="number">
+		<br>
+		<br>
+		Tip Amount:<input id="tip_amount" type="number">
+		<br>
+		<br>
+		<button id="button">Calculate</button>
+		<br>
+		<br>
+		Total Bill:<input id="total_bill" type="number">
+		
+	</div>
+	
+	<script src="main.js"></script>
+</body>
+</html>

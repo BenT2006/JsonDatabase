@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class</h2>
+
+<p>How to use a JavaScript Class.</p>
+
+<p id="nerfClass"></p>
+
+<p id="waterGun"></p>
+
+<script>
+class nerfGun{
+	constructor(modelName){ //has to have exact name "constructor", used to initialize properties
+		this.modelName = modelName;
+	}
+	//this is a class method
+	cost() {
+		return "$30";
+	}
+}
+
+class waterGun extends nerfGun {
+	constructor(modelName, ammo) {
+		super(modelName);
+		this.ammo = ammo;
+	}
+	price() {
+		return this.cost() + " and a lot of water";
+	}
+}
+
+
+retaliator = new nerfGun("Retaliator(White)");
+document.getElementById("nerfClass").innerHTML =
+retaliator.modelName + " costs " + retaliator.cost();
+
+soaker = new waterGun("Anphu's water gun", "water");
+document.getElementById("waterGun").innerHTML = 
+	soaker.modelName + " shoots " + soaker.ammo + ", and it costs "+ soaker.price();
+
+</script>
+
+</body>
+</html>
