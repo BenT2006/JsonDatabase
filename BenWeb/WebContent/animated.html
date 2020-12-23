@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Default</button></p> 
+
+<p><button onclick="myMove()">Up</button></p>
+
+<p><button onclick="down()">Down</button></p>
+
+<p><button onclick="myMove()">Left</button></p>
+
+<p><button onclick="myMove()">Right</button></p>
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+
+var position = 0;
+
+function down() {
+	
+	var elem = document.getElementById("animate");   
+	 
+	  var id = setInterval(frame, 5); //note,dont need ()
+	  
+	  function frame() {
+	    if (position == 375) {
+	      clearInterval(id);
+	    } else {
+	    	
+	   
+	    	position++; 
+	      elem.style.top = position + "px"; 
+	    
+	    	
+	    
+	    }
+	  }
+	
+}
+
+function myMove() {
+
+  var elem = document.getElementById("animate");   
+
+  var id = setInterval(frame, 5); //note,dont need ()
+  
+  function frame() {
+    if (position == 375) {
+      clearInterval(id);
+    } else {
+      position++; 
+      elem.style.top = position + "px"; 
+      elem.style.left = position + "px"; 
+    }
+  }
+  
+}
+</script>
+
+</body>
+</html>

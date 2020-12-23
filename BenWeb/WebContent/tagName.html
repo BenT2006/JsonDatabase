@@ -12,7 +12,20 @@
 <p id="yeet"></p>
 <p id="yeeto"></p>
 
+<p id="p1">This is normal</p>
+<p id="p2">This is big n blue</p>
+
+<button type="button" 
+onclick="document.getElementById('p1').style.color = 'blue'">
+Change</button>
+
 <script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "larger";
+
+
+
 var x = document.getElementById("main");
 var y = x.getElementsByTagName("p");
 var z = document.querySelectorAll("p.classShort")
@@ -20,7 +33,7 @@ document.getElementById("yeet").innerHTML =
 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
 document.getElementById("yeeto").innerHTML = 
 'The first paragraph (index 0) with class "classShort" is: ' + z[0].innerHTML;
-document.write("hi");
+//document.write("hi");
 </script>
 
 </body>
