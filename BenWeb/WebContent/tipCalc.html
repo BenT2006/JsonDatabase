@@ -5,7 +5,7 @@
 body {
   background-color: rgb(205, 92, 92);
 }
-.center {
+container {
   margin: auto;
   height: 70%;
   width: 50%;
@@ -13,50 +13,36 @@ body {
   padding: 75px;
 }
 </style>
-<meta charset="UTF-8">
-<title>Ben's first Tip Calculator</title>
 <script>
 
-function submitter() {
-	  document.getElementById("moneydata").submit();
-	  document.getElementById("moneyDue").innerHTML = 
-			"hihihih";
-	}
-function tipCalc(){	
-	document.getElementById("moneyDue").innerHTML = 
+function submitData(){
+	document.getElementById("moneydata").submit();
+	document.getElementById("total_Bill").innerHTML = 
 		"hihihih";
 }
-tipCalc(tip, price);
+
 </script>
+<meta charset="UTF-8">
+<title>Tip Calculator</title>
 </head>
 <body>
-
-<div class="center">
-  <h1 style="text-align:center;">Ben's Tip Calculator</h1>
-  Desired tip percentage: 
-    <input type="number"
-    	   required name="tip" 
-    	   min="0" 
-    	   value="0"
-           id="percentTip"
-           value=""> 
-           <br>
-  <br>
-  Price of Bill:
-    <input type="number" 
-    	   required name="price" 
-    	   min="0" value="0" 
-    	   step=".01"
-    	   id="Bill"
-           value=""> 
-           <br>
-           <br>
-    <input type="button" onclick="submitter()" value="Calculate">
-  	<p>Tip : </p>
-  	<p id="moneyDue"></p>
-  	
-</div>
-
-
+	<div id="container">
+		Bill Amount:<input id="bill_amount" type="number">
+		<br>
+		<br>
+		Tip Percentage:<input id="tip_percentage" type="number">
+		<br>
+		<br>
+		Tip Amount:<input id="tip_amount" type="number">
+		<br>
+		<br>
+		<button id="button">Calculate</button>
+		<br>
+		<br>
+		Total Bill:<input id="total_bill" type="number">
+		
+	</div>
+	
+	<script src="main.js"></script>
 </body>
 </html>
