@@ -3,46 +3,102 @@
 <head>
 <style>
 body {
-  background-color: rgb(205, 92, 92);
+	background-color: #aaefdf;
+
 }
-container {
-  margin: auto;
-  height: 70%;
-  width: 50%;
-  border: 30px solid black;
-  padding: 75px;
+
+table, td {
+
+	border: 1px solid black;
+	text-align: center;
+	
+}
+
+div {
+	margin: auto;
+	height: 70%;
+	width: 40%;
+	border: 10px solid black;
+	padding: 10px;
+}
+
+
+form {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+label {
+	text-align: center;
 }
 </style>
+
 <script>
 
-function submitData(){
-	document.getElementById("moneydata").submit();
-	document.getElementById("total_Bill").innerHTML = 
-		"hihihih";
+function calc(){
+	var billAmount = document.getElementById('billAmount').value;
+	var tipPert = document.getElementById('tipPert').value;
+	//document.getElementById("test").innerHTML = billAmount + ", " + tipPert;
+	
+	document.getElementById('tip').value = tip(billAmount, tipPert);
+	document.getElementById('totalBill').value = total(tip(billAmount, tipPert), billAmount)
+	
+}
+
+function tip(billAmount, tipPert){
+	var tip = billAmount * tipPert/100;
+	var roundedTip = moneyRound(tip);
+	return roundedTip;
+}
+
+function moneyRound(num) {
+    return Math.ceil(num * 100) / 100;
+}
+
+function total(tip, billAmount){
+	var total = tip * 1 + billAmount * 1;
+	return total;
 }
 
 </script>
+
 <meta charset="UTF-8">
 <title>Tip Calculator</title>
 </head>
 <body>
-	<div id="container">
-		Bill Amount:<input id="bill_amount" type="number">
-		<br>
-		<br>
-		Tip Percentage:<input id="tip_percentage" type="number">
-		<br>
-		<br>
-		Tip Amount:<input id="tip_amount" type="number">
-		<br>
-		<br>
-		<button id="button">Calculate</button>
-		<br>
-		<br>
-		Total Bill:<input id="total_bill" type="number">
-		
-	</div>
+	<h1>Ben's Tip Calculator</h1>
+
 	
-	<script src="main.js"></script>
+		<div>
+			<label>Bill Amount:</label><br>
+			<input type="number" id="billAmount" /><br>
+		
+			<label>Tip Percentage:</label>	<br>
+			<input type="number" id="tipPert" />%<br>
+			
+		
+		
+
+			<button onclick="calc();">Calculate</button><br>
+
+		
+			<label>Tip:</label><br>
+			<input type="number" id="tip" /><br>
+
+		
+			<label>Total Bill:</label><br>
+			<input type="number" id="totalBill" /><br>
+		</div>
+	
+	<p id="test"></p>
+
+
 </body>
 </html>

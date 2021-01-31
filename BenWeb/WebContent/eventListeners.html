@@ -20,7 +20,14 @@
 
 <p id="scroll"></p>
 
-
+/*
+    	https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+    	0 = Unsent, client created but not called yet 
+    	1 = Opened, open() has been called
+    	2 = headers_received, send() has been called, headers and status are avaliable
+    	3 = loading, downloading responseText holds prtial data
+    	4 = done, operation complete
+    	*/
 
 <script>
 var x = document.getElementById("myBtn");

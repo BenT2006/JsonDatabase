@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="windowsize"></p>
+
+<p id="screensize"></p>
+
+<p id="link"></p>
+
+<input type="button" value="Press for fun stuff" onclick="newDoc()">
+
+<input type="button" value="Back" onclick="goBack()">
+
+<button onclick="confirmer()">Test confirm</button>
+
+<p id="confirm"></p>
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(helloAlert, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+
+function helloAlert() {
+	  alert("Hello");
+	}
+
+function confirmer() {
+	  var txt;
+	  if (confirm("Press a button!")) {
+	    txt = "You pressed OK!";
+	  } else {
+	    txt = "You pressed Cancel!";
+	  }
+	  document.getElementById("confirm").innerHTML = txt;
+	}
+
+var w = window.innerWidth 
+//|| document.documentElement.clientWidth either of these work
+//||document.body.clientWidth;
+
+function goBack() {
+	  window.history.back()
+	}
+	
+var h = window.innerHeight 
+//|| document.documentElement.clientHeight either of these work
+//|| document.body.clientHeight;
+
+function newDoc() {
+	  window.location.assign("https://data.whicdn.com/images/339215611/original.jpg")
+	}
+
+var x = document.getElementById("windowsize");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+
+document.getElementById("screensize").innerHTML = 
+	"Screen width is " + screen.width + ", Screen height is " + screen.height;
+	
+document.getElementById("link").innerHTML = 
+	"Link of my testing:<br>" + window.location.href;
+</script>
+
+</body>
+</html>

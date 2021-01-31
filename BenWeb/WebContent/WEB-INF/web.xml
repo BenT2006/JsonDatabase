@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>BenWeb</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,4 +9,57 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+<!-- Define servlets that are included in the example application -->
+
+
+
+	<!-- without this, have to specified the path ../MyHelloWorld -->
+	<!-- Equivalent to http://localhost:8080/HelloWorld/Servlet/MyHelloWorld -->
+
+	<servlet>
+		<servlet-name>MyHelloWorld</servlet-name>
+		<servlet-class>Servlet.MyHelloWorld</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyHelloWorld</servlet-name>
+		<url-pattern>/Servlet/MyHelloWorld</url-pattern>
+	</servlet-mapping>
+    
+
+	<servlet>
+		<servlet-name>MyRequestInfo</servlet-name>
+		<servlet-class>Servlet.MyRequestInfo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyRequestInfo</servlet-name>
+		<url-pattern>/Servlet/MyRequestInfo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>MyRequestHeader</servlet-name>
+		<servlet-class>Servlet.MyRequestHeader</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyRequestHeader</servlet-name>
+		<url-pattern>/Servlet/MyRequestHeader</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MyRequestParam</servlet-name>
+		<servlet-class>Servlet.MyRequestParam</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>MyRequestParam</servlet-name>
+		<url-pattern>/Servlet/MyRequestParam</url-pattern>
+	</servlet-mapping>
+  
+  
+  
 </web-app>
